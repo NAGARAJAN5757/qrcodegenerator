@@ -1,0 +1,257 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>QR Code Generator</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header"><h1>Stylish QRCODE Generetor</h1></div>
+        <div id="contentPart">
+            <div class="Row">        
+                <div class="part">
+                    <div class="parttitle">
+                        Main Options
+                    </div>
+                    <div class="info">
+                        <label for="ip">Data</label>
+                        <input id="ip1" type="text" value="Enter text or url">                    
+                    </div>
+
+                    <div class="sizes">
+                        <div class="info w">
+                            <label for="width">Width</label>
+                            <input id="width" type="number" min="100">   
+                            <div class="alertmsg alertmsgwidth">Please enter value above 20</div>                 
+                        </div>
+                        <div class="info m">
+                            <label for="margin">Margin</label>
+                            <input id="margin" type="number"> 
+                            <div class="alertmsg alertmsgmargin">Please enter value less than 0.5</div>                     
+                        </div>
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="parttitle">
+                        QR Dots Options
+                    </div>
+                    <div class="info">
+                        <label for="dotstyle">Dot Style</label>
+                        <select id ="dotstyle">
+                            <option value="Dot">Dot</option>
+                            <option value="Square">Square</option>
+                            <option value="Round">Round</option>
+                        </select>                    
+                    </div>
+                    <div class="info">
+                        <label for="qrdotcolortype">QR Code Dot Color type</label><br>
+                        <select id ="qrdotcolortype">
+                            <option value="singleColor">Single Color</option>
+                            <option value="colorGradient">Color Gradient</option>
+                        </select>                    
+                    </div>
+                    <div class="info gradcolors dotgradcolor">
+                            <div class="part1">
+                                <label for="dotscolor1">Dots Color 1</label>
+                                <br>                                
+                                <input id="dotscolor1" type="color">
+                            </div>
+                            <div class="part2">
+                                <label for="dotscolor2">Dots Color 2</label>
+                                <br>
+                                <input id="dotscolor2" type="color">
+                            </div>
+                            <div class="part3">
+                                <label for="dotsrotation">Rotation</label>
+                                <br>
+                                <input id="dotsrotation" type="number" placeholder = 0 >
+                            </div>
+                    </div>
+
+                    <div class="info linearcolor dotlinearcolor">
+                        <label for="dotscolor">Dots Color</label>
+                        <br>
+                        <input id="dotscolor" type="color">                    
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="parttitle">
+                        Corner Square Options
+                    </div>
+                    <div class="info">
+                        <label for="cornersquarestyle">Corner Square Style</label>
+                        <select id ="cornersquarestyle">
+                            <option value="Dot">Dot</option>
+                            <option value="Square">Square</option>
+                            <option value="Round">Round</option>
+                        </select>                    
+                    </div>
+                    <div class="info">
+                        <label>Corner Square Color type</label><br>
+                        <select id ="cornersquarecolortype">
+                            <option value="singleColor">Single Color</option>
+                            <option value="colorGradient">Color Gradient</option>
+                        </select>                    
+                    </div>
+                    <div class="info gradcolors cornersquaregradcolor">
+                            <div class="part1">
+                                <label for="cornersquarecolor1">Dots Color 1</label>
+                                <br>                                
+                                <input id="cornersquarecolor1" type="color">
+                            </div>
+                            <div class="part2">
+                                <label for="cornersquarecolor2">Dots Color 2</label>
+                                <br>
+                                <input id="cornersquarecolor2" type="color">
+                            </div>
+                            <div class="part3">
+                                <label for="cornersquarerotation">Rotation</label>
+                                <br>
+                                <input id="cornersquarerotation" type="number" placeholder=0>
+                            </div>                    
+                        
+                    </div>
+                    <div class="info cornersquarelinearcolor">
+                        <label for="cornersquarecolor">Corner Square Color</label>
+                        <br>
+                        <input id="cornersquarecolor" type="color">                    
+                    </div>
+                </div>
+            </div>
+            <div class="Row">        
+                <div class="part">
+                    <div class="parttitle">
+                        Corner Dot Options
+                    </div>
+                    <div class="info">
+                        <label for="cornersdotstyle">Corner Dot Style</label>
+                        <select id ="cornersdotstyle">
+                            <option value="Dot">Dot</option>
+                            <option value="Square">Square</option>
+                        </select>                    
+                    </div>
+                    <div class="info">
+                        <label>Corner Dot Color type</label><br>
+                        <select id ="cornerdotcolortype">
+                            <option value="singleColor">Single Color</option>
+                            <option value="colorGradient">Color Gradient</option>
+                        </select>                     
+                    </div>
+                    <div class="info gradcolors cornerdotgradcolor">
+                            <div class="part1">
+                                <label for="cornerdotcolor1">Dots Color 1</label>
+                                <br>                                
+                                <input id="cornerdotcolor1" type="color">
+                            </div>
+                            <div class="part2">
+                                <label for="cornerdotcolor2">Dots Color 2</label>
+                                <br>
+                                <input id="cornerdotcolor2" type="color">
+                            </div>
+                            <div class="part3">
+                                <label for="cornerdotrotation">Rotation</label>
+                                <br>
+                                <input id="cornerdotrotation" type="number" placeholder=0>
+                            </div>                    
+                    </div>
+                    <div class="info cornerdotlinearcolor">
+                        <label for="cornerdotcolor">Corner Square Color</label>
+                        <br>
+                        <input id="cornerdotcolor" type="color">                    
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="parttitle">
+                        Background Options
+                    </div>
+                    <div class="info">
+                        <label>Background Color type</label><br>
+                        <select id ="bgcolortype">
+                            <option value="singleColor">Single Color</option>
+                            <option value="colorGradient">Color Gradient</option>
+                        </select>                       
+                    </div>
+                    <div class="info gradcolors bggradcolor">
+                            <div class="part1">
+                                <label for="bgcolor1">Dots Color 1</label>
+                                <br>                                
+                                <input id="bgcolor1" type="color">
+                            </div>
+                            <div class="part2">
+                                <label for="bgcolor2">Dots Color 2</label>
+                                <br>
+                                <input id="bgcolor2" type="color" value="#000000">
+                            </div>
+                            <div class="part3">
+                                <label for="bgcolorrotation">Rotation</label>
+                                <br>
+                                <input id="bgcolorrotation" type="number" placeholder=0>
+                            </div>                  
+                    </div>
+                    <div class="info bglinearcolor">
+                        <label for="bgcolor">Background Color</label>
+                        <br>
+                        <input id="bgcolor" type="color" value="#ffffff">                    
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="parttitle">
+                        Image Options
+                    </div>
+                    <div class="info">
+                        <label for="selectimg">Select File</label><br>
+                        <input id="selectimg" type="file">         
+                        <output></output>         
+                    </div>
+                    <div class = "info">
+                        <input type="checkbox" id="imgreq" name="imgreq" checked>
+                        <label for="imgreq">Image required</label>
+                    </div>
+                    <div class="info">
+                        <label for="imgsize">Image Size</label><br>
+                        <input id="imgsize" type="number" placeholder="max 0.5">     
+                        <div class="alertmsg alertmsgimgsize">Please enter value greater  than 0 and less than or equal to 0.5</div>             
+                    </div>
+                    <div class="info">
+                        <label for="imgmargin">Image Margin</label><br>
+                        <input id="imgmargin" type="number">      
+                        <div class="alertmsg alertmsgimgmargin">Please enter value greater  than 0 and less than or equal to 5</div>            
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+        <div id="qrbox">
+                <div id=qrpart>
+                    <div id="qrtxt">YOUR QRCODE APPEARS HERE</div>
+                    <div id="qrcontent"></div>
+                </div>
+                <div id="dlpart">
+                    <div class="info">
+                        <label for="dloptions">Select the download type</label>
+                        <select id ="dloptions">
+                            <option value="png">PNG</option>
+                            <option value="jpeg">JPEG</option>
+                            <option value="webp">WEBP</option>
+                            <option value="svg">SVG</option>
+                            <option value="colorGradient">Color Gradient</option>
+                        </select>
+                        <div class="info">
+                            <button id="dlbtn">Download</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="footer"><h3>
+            Made with <i class="fa-sharp fa-solid fa-heart fa-beat-fade" style="color: #ff0000;"></i> by NAGARAJAN R J
+            </h3>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/qr-code-styling-v2@1.6.1/lib/qr-code-styling.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

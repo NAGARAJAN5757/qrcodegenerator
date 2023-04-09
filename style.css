@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#qrbox,#contentPart{
+    display: flex;
+    align-items: stretch;
+    justify-content:center;
+    width:80%;
+    position: relative;
+    left:10%;
+    margin-top: 40px;
+    border: 2px solid black;
+}
+body{
+    background-color:rgb(93, 165, 228);
+}
+.Row{
+    background-color: tomato;
+    padding:2rem;
+    width:50%;
+}
+input,select,button{
+    width: 90%;
+}
+button{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    color:orange;
+    background-color:green;
+    height: 36px;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input[type=color]{
+    width: 100px;
+    padding: 1px;
+}
+input[type=checkbox]{
+    width:10px;
+    height:10px;
+    margin-right: 2px;
+}
+.parttitle{
+    background-color: greenyellow;
+    text-align: center;
+    font-weight: bolder;
+}
+input,select{
+    margin-top:0px;
+    margin-right: 10%;
+    padding : 6px;
+    height:1.8rem;
+    outline: none;
+}
+label,#qrtxt{
+    margin-bottom: 10px;
+    font-family: Alkatra;
+    color :brown;
+    font-weight: 700;
+}
+#qrtxt{
+    color: brown;
+}
+.info{
+    margin-bottom: 10px;
+}
+
+.part{
+    margin-bottom: 16px;
+    padding: 5px;
+    border: 2px solid ;
+    border-radius: 6px;
+    background-color:violet;
+}
+.sizes{
+    display:flex;
+    justify-content: space-around;
+}
+@media screen and (min-width: 600.1px){
+    #contentPart > div:nth-child(1)  > div {
+    margin-bottom: 2.2rem;
+    }
+}
+#qrbox{
+    background-color: rgb(93, 165, 228);
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color:violet;
+}
+output{
+    width: 70px;
+    height: 70px;
+}
+.alertmsg{
+    color: red;
+}
+.width{
+    margin-right: 6px;
+}
+
+.gradcolors,.alertmsg{
+    display: none;
+}
+#footer,#header{
+    padding : 10px 0px;
+    max-height: 10vh;
+    text-align: center;
+    background-color: aquamarine;
+}
+#header{
+    max-height: 20%;
+    color:tomato;
+}
+.parttitle{
+    height:24px;
+    padding-top: 3px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px){
+    #contentPart{
+        flex-direction: column;
+    }
+    .part{
+        margin-bottom: 35.200;
+    }
+    .Row{
+        width:100%
+    }
+    #contentPart > .Row:first-child{
+        padding-bottom: 0%;
+    }
+    #contentPart > .Row:last-child{
+        padding-top: 0%;
+    }
+}
