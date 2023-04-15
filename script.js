@@ -1,3 +1,4 @@
+//hiding alert mesages initially
 $(".alertmsg").hide()
 // defining default values
 let inputData = "qrRJ";
@@ -26,10 +27,8 @@ let qripimgsize = 0.4
 let qripimgmargin = 3 
 let dltype = "png"
 const fileSelector = document.querySelector('#selectimg')
-
-
 let qrcopy ;
-
+//function for generating qrcode for each change in data or info
 generateqr()
 function generateqr(){
     document.getElementById("qrcontent").innerHTML="";
@@ -66,20 +65,17 @@ function generateqr(){
     $("#qrcontent").innerHTML = "";
     qrCode.append(document.getElementById("qrcontent"));
 }
+//download function
 function dl(){
-    qrcopy.download({ name: "qr", extension: dltype });
-    
+    qrcopy.download({ name: "qr", extension: dltype });   
 }
+//taking all info fields
 let infos = $(".info");
 for (i of infos) {
     $(i).bind('input', function(e) {
         if(e.target.id === "ip1"){
-            
             inputData = $("#ip1").val()
             generateqr();
-
-            
-            
         }
         else if(e.target.id === "width"){
             if($("#width").val() <= 20){
@@ -302,7 +298,8 @@ for (i of infos) {
 
     });
 }
-document.getElementById("selectimg").addEventListener("change", () => {
+// for taking image as input and checking image is required or not in qrcode
+$("#selectimg").bind('change', function() {
         let images =""
         var imageBlob = new Blob([fileSelector.files[0]], { type: fileSelector.files[0].type });
         var imageUrl = window.URL.createObjectURL(imageBlob);
@@ -321,6 +318,7 @@ document.getElementById("selectimg").addEventListener("change", () => {
             generateqr()
         }  
 })
+//download section
 $("#dlbtn").click(function(){
     dl()
 })
